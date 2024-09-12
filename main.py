@@ -28,7 +28,6 @@ class Vk:
         response = requests.get(url, params={**self.params, **params})
         return response.json()    
 
-
     def get_profile_photos(self, album_id, count=''):
     # Получение фотографий пользователя ВК из альбома
         url = f'{self.base_address}/photos.get'
@@ -165,15 +164,16 @@ class YaDisk:
                     photos_list.append(photos_dict)
                     time.sleep(1)
             photos_dict = {folder_path : photos_list}
-            self.result_save(photos_dict, 'result.json')
+            result_save(photos_dict, 'result.json')
         return len(photos_list)   
 
-    def result_save(self, photos_dict: dict, filename: str):
-    # Сохранение результата в файл {filename} в формате json
-        json_str = json.dumps(photos_dict, ensure_ascii=False, indent=2)
-        with open(filename, 'w') as f:
-            f.write(json_str)
 
+def result_save(photos_dict: dict, filename: str):
+    # Сохранение результата в файл {filename} в формате json
+    json_str = json.dumps(photos_dict, ensure_ascii=False, indent=2)
+    with open(filename, 'w') as f:
+        f.write(json_str)
+   
 
 def config_parametr(parametr: str):
 # Параметры из файла setting.ini
