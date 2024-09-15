@@ -1,3 +1,4 @@
 venv/
 *.json
 *.ini
+__pycache__/
