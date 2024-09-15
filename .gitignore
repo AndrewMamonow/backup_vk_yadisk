@@ -2,3 +2,4 @@ venv/
 *.json
 *.ini
 __pycache__/
+.idea/
