@@ -2,8 +2,8 @@ import json
 import requests
 import configparser
 from tqdm import tqdm
-from VK import Vk
-from YD import YaDisk
+from vk import Vk
+from yd import YaDisk
 
 def main():
 # Чтение файлов из альбома ВК и сохранение их на Яндекс диск.    
