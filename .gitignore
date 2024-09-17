@@ -1,5 +1,6 @@
 venv/
+settings.ini
 *.json
 *.ini
 __pycache__/
-.idea/
+**/.idea/
